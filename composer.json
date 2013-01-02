@@ -1,0 +1,28 @@
+{
+	"name": "pylonworks/essencebase",
+	"type": "typo3-flow-package",
+	"description": "",
+	"version": "0.0.1",
+	"minimum-stability":"dev",
+	"require": {
+		"typo3/flow": "*",
+		"typo3/flow-composer-installers": "*",
+		"typo3/twitter-bootstrap": "*"
+	},
+	"require-dev":{
+		"typo3/kickstart":"dev-master"
+	},
+	"scripts":{
+		"post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+		"post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall"
+	},
+	"config":{
+		"vendor-dir":"Packages/Libraries",
+		"bin-dir":"bin"
+	},
+	"autoload": {
+		"psr-0": {
+			"PylonWorks\\Essencebase": "Classes"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+<f:layout name="Login" />
+
+<f:section name="Title"></f:section>
+
+<f:section name="Content">
+    <f:form action="authenticate" method="post" name="loginform" class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" id="username" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][username]" value="" tabindex="1" class="input-block-level" placeholder="Email address">
+        <input type="password" id="password" name="__authentication[TYPO3][Flow][Security][Authentication][Token][UsernamePassword][password]" value="" tabindex="2" class="input-block-level" placeholder="Password">
+        <label class="checkbox">
+            <input type="checkbox" value="remember-me" tabindex="3"> Remember me
+        </label>
+        <button class="btn btn-large btn-primary" type="submit" tabindex="4">Sign in</button>
+    </f:form>
+
+</f:section>
+
+
+

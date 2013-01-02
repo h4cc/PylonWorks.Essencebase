@@ -1,0 +1,18 @@
+
+# Dashboard
+-
+  name: 'Default dashboard'
+  uriPattern: 'dashboard'
+  defaults:
+    '@package': 'PylonWorks.Essencebase'
+    '@controller': 'Dashboard'
+    '@action': 'index'
+
+# Fallback
+-
+  name: 'Fallback'
+  uriPattern: ''
+  defaults:
+    '@package': 'PylonWorks.Essencebase'
+    '@controller': 'Login'
+    '@action': 'index'
