@@ -6,8 +6,10 @@ env:
   - DB=mysql
 
 before_script:
-  - composer help
+  - mkdir build-requirements
+  - cd build-requirements
   - composer require typo3/buildessentials:dev-master
+  - composer require mikey179/vfsStream:v1.1.*
 
 script:
   - phpunit -c Tests/Unit.travis.xml
