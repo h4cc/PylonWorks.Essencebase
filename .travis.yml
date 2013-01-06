@@ -9,8 +9,7 @@ before_script:
   - composer require typo3/buildessentials:dev-master
 
 script:
-  - ls -la
-  - ls -la vendor
+  - phpunit -c Tests/Unit.xml
 
 notifications:
   email:
