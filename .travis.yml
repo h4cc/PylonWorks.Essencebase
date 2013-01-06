@@ -9,7 +9,7 @@ before_script:
   - composer require typo3/buildessentials:dev-master
 
 script:
-  - phpunit -c Tests/Unit.xml
+  - phpunit -c Tests/Unit.travis.xml
 
 notifications:
   email:
