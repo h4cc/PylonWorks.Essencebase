@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<phpunit strict="true"
+         bootstrap="../../../../Build/BuildEssentials/PhpUnit/UnitTestBootstrap.php"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true">
+    <testsuites>
+        <testsuite name="All Unit Tests">
+            <directory>./Unit/</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
