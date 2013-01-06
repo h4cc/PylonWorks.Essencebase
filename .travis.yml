@@ -1,0 +1,17 @@
+language: php
+php:
+  - 5.4
+
+env:
+  - DB=mysql
+
+before_script:
+  - composer require typo3/buildessentials:dev-master
+
+script:
+  - exit 0
+
+notifications:
+  email:
+    - me@childno.de
+    - development@morphodo.com
