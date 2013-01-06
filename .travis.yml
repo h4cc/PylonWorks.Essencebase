@@ -6,7 +6,8 @@ env:
   - DB=mysql
 
 before_script:
-  - composer --dev require typo3/buildessentials:dev-master
+  - composer help
+  - composer require typo3/buildessentials:dev-master
 
 script:
   - phpunit -c Tests/Unit.travis.xml
