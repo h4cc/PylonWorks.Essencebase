@@ -13,5 +13,4 @@ script:
 
 notifications:
   email:
-    - me@childno.de
     - development@morphodo.com
