@@ -6,6 +6,7 @@ env:
   - DB=mysql
 
 before_script:
+  - composer require typo3/buildessentials:dev-master
   - composer install --dev
   - ls -la 
 
