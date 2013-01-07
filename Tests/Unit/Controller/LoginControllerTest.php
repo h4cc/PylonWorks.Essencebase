@@ -14,6 +14,6 @@ class LoginControllerTest extends \TYPO3\Flow\Tests\UnitTestCase {
 	 * @test
 	 */
 	public function verifyLoginWorks() {
-		$this->fail("Implement this test");
+		$this->markTestIncomplete("Implement this test");
 	}
 }
