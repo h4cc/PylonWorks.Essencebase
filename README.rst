@@ -8,6 +8,16 @@ Essencebase
 :Homepage: http://www.pylonworks.com
 :Build status: |buildStatusIcon|
 
+Update
+================
+
+Manual update on command line
+------------
+
+::
+
+	sudo composer update pylonworks/essencebase
+
 
 Testing
 ================
