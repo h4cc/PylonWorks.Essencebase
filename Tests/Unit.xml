@@ -5,7 +5,7 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true">
     <testsuites>
-        <testsuite name="All Unit Tests">
+        <testsuite name="All unit tests">
             <directory>./Unit/</directory>
         </testsuite>
     </testsuites>
