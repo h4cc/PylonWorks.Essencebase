@@ -51,4 +51,4 @@ Download XSD files
    :alt: Build Status
    :target: https://travis-ci.org/PylonWorks/PylonWorks.Essencebase
 
-.. |downloadXsdFiles| image:: https://raw.github.com/pylonworks/essencebase/master/Resources/Documentation/Images/IncludeXSD.png
+.. |downloadXsdFiles| image:: https://raw.github.com/PylonWorks/PylonWorks.Essencebase/master/Resources/Documentation/Images/IncludeXSD.png
