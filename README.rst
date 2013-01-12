@@ -39,8 +39,8 @@ Add the following namespace declaration to the ``Fluid`` templates in order to e
 ::
 	<?xml version="1.0" encoding="UTF-8" ?>
 	<html xmlns="http://www.w3.org/1999/xhtml"
-		xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers.xsd"
-		xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers.xsd" lang="en">
+		xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
+		xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
 
 Download XSD files
 -------------
