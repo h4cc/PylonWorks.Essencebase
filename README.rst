@@ -30,10 +30,10 @@ Command line PHPUnit test
 	phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.xml
 
 
-Fluid XML namespace
+TYPO3 Fluid XML namespace in PHPStorm
 =================
 
-Namespace declaration
+General namespace declaration
 -------------
 Add the following namespace declaration to the ``Fluid`` templates in order to enable tag auto completion.
 ::
