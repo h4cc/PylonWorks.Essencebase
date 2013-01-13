@@ -1,0 +1,31 @@
+TYPO3:
+  Flow:
+    configuration:
+      compileConfigurationFiles: TRUE
+    security:
+      authentication:
+        authenticationStrategy: oneToken
+        DefaultProvider:
+          provider: PersistedUsernamePasswordProvider
+          entryPoint: 'WebRedirect'
+          entryPointOptions:
+            routeValues:
+              '@package': 'PylonWorks.Essencebase'
+              '@controller': 'Login'
+              '@action': 'login'
+              '@format': 'html'
+
+
+        #  AdminInterfaceProvider:
+        #    provider: 'PersistedUsernamePasswordProvider'
+        #    providerOptions:
+        #      fooBar: 'baz'
+        #    requestPatterns:
+        #      controllerObjectName: 'TYPO3\Admin\Controller\.*'
+        #    entryPoint: 'WebRedirect'
+        #    entryPointOptions:
+        #      routeValues:
+        #        '@package': 'Your.Package'
+        #        '@controller': 'Authenticate'
+        #        '@action': 'login'
+        #        '@format': 'html'

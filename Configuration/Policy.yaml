@@ -1,0 +1,15 @@
+roles:
+  Administrator: [Redakteur]
+  Redakteur: []
+
+resources:
+  methods:
+    Dashboard: method(PylonWorks\Essencebase\Controller\DashboardController->.*())
+
+acls:
+  Administrator:
+    methods:
+      Dashboard:  GRANT
+  Redakteur:
+    methods:
+      Dashboard: GRANT
