@@ -12,7 +12,7 @@ TYPO3:
             routeValues:
               '@package': 'PylonWorks.Essencebase'
               '@controller': 'Login'
-              '@action': 'login'
+              '@action': 'authenticate'
               '@format': 'html'
 
 
