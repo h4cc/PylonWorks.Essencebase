@@ -19,16 +19,29 @@ Manual update on command line
 	sudo composer update pylonworks/essencebase
 
 
-Testing
+Command line testing with PHPUnit
 ================
 
-Command line PHPUnit test
+Unit tests
 -------------
 
 ::
 
 	phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.xml
 
+Functional tests
+-------------
+
+::
+
+	phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Functional.xml
+
+Create admin user
+=================
+
+::
+
+	./flow admin:create admin@pylonworks.com passsword
 
 TYPO3 Fluid XML namespace in PHPStorm
 =================
