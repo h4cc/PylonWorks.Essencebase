@@ -20,7 +20,7 @@ class LoginControllerTest extends \TYPO3\Flow\Tests\FunctionalTestCase {
 			'@action' => 'index',
 			'@format' =>'html'
 		));
-		$this->registerRoute('authenticate', '/authenticate', array(
+		$this->registerRoute('Call authentication method', 'authenticate', array(
 			'@package' => 'PylonWorks.Essencebase',
 			'@controller' => 'Login',
 			'@action' => 'authenticate',
