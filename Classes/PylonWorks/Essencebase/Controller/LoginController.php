@@ -61,7 +61,7 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 			$this->authenticationManager->authenticate();
 			$this->securityLogger->log("called authenticate - 3");
 			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Successfully logged in.'));
-			$this->redirect('index', 'Login');
+			$this->redirect('index', 'Dashboard');
 		} catch (\TYPO3\Flow\Security\Exception\AuthenticationRequiredException $exception) {
 			$this->securityLogger->log("called authenticate - 4");
 			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Wrong username or password.'));
