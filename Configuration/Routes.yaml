@@ -8,6 +8,15 @@
     '@controller': 'Dashboard'
     '@action': 'index'
 
+# Authenticate
+-
+  name: 'Authenticate'
+  uriPattern: 'authenticate'
+  defaults:
+    '@package': 'PylonWorks.Essencebase'
+    '@controller': 'Login'
+    '@action': 'authenticate'
+
 # Fallback
 -
   name: 'Fallback'
