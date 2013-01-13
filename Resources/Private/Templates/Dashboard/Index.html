@@ -1,15 +1,22 @@
-<f:layout name="Default" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
+      xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
+    <head>
+        <f:layout name="Default" />
+        <f:section name="Title">Index view of Dashboard controller</f:section>
+    </head>
+    <body>
+        <f:section name="Content">
+            <h1>A freshly created Fluid template!</h1>
+            <p>Some data set by the controller:</p>
+            <ul>
 
-<f:section name="Title">Index view of Dashboard controller</f:section>
+                <f:for each="{foos}" as="foo">
+                    <li>{foo}</li>
+                </f:for>
 
-<f:section name="Content">
-	<h1>A freshly created Fluid template!</h1>
-	<p>Some data set by the controller:</p>
-	<ul>
-		
-		<f:for each="{foos}" as="foo">
-			<li>{foo}</li>
-		</f:for>
-		
-	</ul>
-</f:section>
+            </ul>
+        </f:section>
+    </body>
+</html>
