@@ -5,16 +5,16 @@ TYPO3:
     security:
       authentication:
         authenticationStrategy: oneToken
-        DefaultProvider:
-          provider: PersistedUsernamePasswordProvider
-          entryPoint: 'WebRedirect'
-          entryPointOptions:
-            routeValues:
-              '@package': 'PylonWorks.Essencebase'
-              '@controller': 'Login'
-              '@action': 'authenticate'
-              '@format': 'html'
-
+        providers:
+          DefaultProvider:
+            provider: PersistedUsernamePasswordProvider
+            entryPoint: 'WebRedirect'
+            entryPointOptions:
+              routeValues:
+                '@package': 'PylonWorks.Essencebase'
+                '@controller': 'Login'
+                '@action': 'authenticate'
+                '@format': 'html'
 
         #  AdminInterfaceProvider:
         #    provider: 'PersistedUsernamePasswordProvider'
