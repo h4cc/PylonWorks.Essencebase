@@ -1,0 +1,28 @@
+<f:flashMessages as="flashMessages">
+    <f:for each="{flashMessages}" as="flashMessage">
+        <f:if condition="{flashMessage.severity} == 'OK'">
+            <div class="alert alert-success">
+                <strong>{flashMessage.title}</strong>
+                <p>{flashMessage}</p>
+            </div>
+        </f:if>
+        <f:if condition="{flashMessage.severity} == 'Error'">
+            <div class="alert alert-error">
+                <strong>{flashMessage.title}</strong>
+                <p>{flashMessage}</p>
+            </div>
+        </f:if>
+        <f:if condition="{flashMessage.severity} == 'Notice'">
+            <div class="alert alert-info">
+                <strong>{flashMessage.title}</strong>
+                <p>{flashMessage}</p>
+            </div>
+        </f:if>
+        <f:if condition="{flashMessage.severity} == 'Warning'">
+            <div class="alert alert-warning">
+                <strong>{flashMessage.title}</strong>
+                <p>{flashMessage}</p>
+            </div>
+        </f:if>
+    </f:for>
+</f:flashMessages>
