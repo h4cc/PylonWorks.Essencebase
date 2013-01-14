@@ -16,45 +16,11 @@ use TYPO3\Flow\Annotations as Flow;
 class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController {
 
 	/**
-	 * @var \TYPO3\Flow\Security\Authentication\AuthenticationManagerInterface
-	 * @Flow\Inject
-	 */
-	protected $authenticationManager;
-
-	/**
-	 * @var \TYPO3\Flow\Security\AccountRepository
-	 * @Flow\Inject
-	 */
-	protected $accountRepository;
-
-	/**
-	 * @var \TYPO3\Flow\Security\AccountFactory
-	 * @Flow\Inject
-	 */
-	protected $accountFactory;
-
-	/**
 	 * Index action
 	 *
 	 * @return void
 	 */
 	public function indexAction() {
-
-	}
-
-	/**
-	 * @throws \TYPO3\Flow\Security\Exception\AuthenticationRequiredException
-	 * @return void
-	 */
-	public function authenticateAction() {
-		try {
-			$this->authenticationManager->authenticate();
-			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged in.', NULL, array(), 'Welcome!'));
-			$this->redirect('index', 'Dashboard');
-		} catch (\TYPO3\Flow\Security\Exception\AuthenticationRequiredException $exception) {
-			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Wrong username or password.', NULL, array(), 'Oooops!'));
-			throw $exception;
-		}
 	}
 
 	/**
@@ -63,37 +29,39 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 	 * something like the following code to restart the originally intercepted
 	 * request:
 	 *
-	 * if ($originalRequest !== NULL) {
-	 *     $this->redirectToRequest($originalRequest);
-	 * }
-	 * $this->redirect('someDefaultActionAfterLogin');
-	 *
 	 * @param \TYPO3\Flow\Mvc\ActionRequest $originalRequest The request that was intercepted by the security framework, NULL if there was none
 	 *
 	 * @return string
 	 */
 	protected function onAuthenticationSuccess(\TYPO3\Flow\Mvc\ActionRequest $originalRequest = NULL) {
-		// TODO: Implement onAuthenticationSuccess() method.
+		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged in.', NULL, array(), 'Welcome!'));
+		$this->redirect('index', 'Dashboard');
 	}
 
-	public function logoutAction() {
-		$this->authenticationManager->logout();
-		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged out.'));
+	/**
+	 * Is called if authentication failed.
+	 *
+	 * Override this method in your login controller to take any
+	 * custom action for this event. Most likely you would want
+	 * to redirect to some action showing the login form again.
+	 *
+	 * @param \TYPO3\Flow\Security\Exception\AuthenticationRequiredException $exception The exception thrown while the authentication process
+	 * @return void
+	 */
+	protected function onAuthenticationFailure(\TYPO3\Flow\Security\Exception\AuthenticationRequiredException $exception = NULL) {
+		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Authentication failed!', ($exception === NULL ? 1347016771 : $exception->getCode())));
 		$this->redirect('index', 'Login');
 	}
 
 	/**
+	 * Logout action
 	 *
+	 * @return void
 	 */
-	public function loginAction() {
-		$this->securityLogger->log("called loginAction");
-		if ($this->securityContext->getAccount() !== NULL) {
-			$this->securityLogger->log("called loginAction - success");
-			$this->redirect('index', 'Dashboard');
-		} else {
-			$this->securityLogger->log("called loginAction - failed, redirect back to loginAction");
-			parent::loginAction();
-		}
+	public function logoutAction() {
+		parent::logoutAction();
+		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged out.'));
+		$this->redirect('index', 'Login');
 	}
 }
 ?>
