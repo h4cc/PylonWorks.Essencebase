@@ -34,12 +34,6 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 	protected $accountFactory;
 
 	/**
-	 * @var \TYPO3\Flow\Log\SecurityLoggerInterface
-	 * @Flow\Inject
-	 */
-	protected $securityLogger;
-
-	/**
 	 * Index action
 	 *
 	 * @return void
@@ -53,17 +47,11 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 	 * @return void
 	 */
 	public function authenticateAction() {
-
-		$this->securityLogger->log("called authenticate");
-
 		try {
-			$this->securityLogger->log("called authenticate - 2");
 			$this->authenticationManager->authenticate();
-			$this->securityLogger->log("called authenticate - 3");
 			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged in.', NULL, array(), 'Welcome!'));
 			$this->redirect('index', 'Dashboard');
 		} catch (\TYPO3\Flow\Security\Exception\AuthenticationRequiredException $exception) {
-			$this->securityLogger->log("called authenticate - 4");
 			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Wrong username or password.', NULL, array(), 'Oooops!'));
 			throw $exception;
 		}
@@ -86,14 +74,11 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 	 */
 	protected function onAuthenticationSuccess(\TYPO3\Flow\Mvc\ActionRequest $originalRequest = NULL) {
 		// TODO: Implement onAuthenticationSuccess() method.
-
-		$this->securityLogger->log("called onAuthenticationSuccess");
-
 	}
 
 	public function logoutAction() {
 		$this->authenticationManager->logout();
-		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Successfully logged out.'));
+		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged out.'));
 		$this->redirect('index', 'Login');
 	}
 
