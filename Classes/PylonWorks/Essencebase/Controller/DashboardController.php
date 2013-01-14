@@ -21,30 +21,7 @@ class DashboardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 	 * @return void
 	 */
 	public function indexAction() {
-		$this->view->assign('navigationItems', array(
-			array(
-				'id' => 'navProjects',
-				'label' => 'Projects',
-				'items' => array(
-					array(
-						'label' => 'Show projects',
-						'href' => "http://google.com"
-					),
-					array(
-						'divider' => TRUE
-					),
-					array(
-						'label' => 'New Project',
-						'href' => "http://google.com"
-					)
-				)
-			),
-			array(
-				'id' => 'navTasks',
-				'label' => 'Tasks',
-				'href' => "http://google.com"
-			)
-		));
+
 	}
 
 }
