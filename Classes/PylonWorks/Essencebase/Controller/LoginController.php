@@ -60,12 +60,11 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 			$this->securityLogger->log("called authenticate - 2");
 			$this->authenticationManager->authenticate();
 			$this->securityLogger->log("called authenticate - 3");
-			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Successfully logged in.'));
+			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged in.', NULL, array(), 'Welcome!'));
 			$this->redirect('index', 'Dashboard');
 		} catch (\TYPO3\Flow\Security\Exception\AuthenticationRequiredException $exception) {
 			$this->securityLogger->log("called authenticate - 4");
-			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Wrong username or password.'));
-			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error($exception->getMessage()));
+			$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Error('Wrong username or password.', NULL, array(), 'Oooops!'));
 			throw $exception;
 		}
 	}
