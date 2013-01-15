@@ -7,12 +7,13 @@
 		<meta charset="utf-8">
 		<title><f:render section="Title" /></title>
 		<f:base />
-		<bootstrap:include version="2.1"/>
-        <link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
+		<link href="{f:uri.resource(path: 'Twitter/Bootstrap/css/bootstrap.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
+		<script src="{f:uri.resource(path: 'Twitter/Bootstrap/js/bootstrap.js', package: 'PylonWorks.Essencebase')}"></script>
+		<link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
     <div class="container">
-        <f:render partial="FlashMessage" />
+		<f:render partial="FlashMessage" />
 
 		<h1><f:render section="Title" /></h1>
 		<f:render section="Content" />
