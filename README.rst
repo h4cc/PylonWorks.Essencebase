@@ -18,6 +18,21 @@ Manual update on command line
 
 	sudo composer update pylonworks/essencebase
 
+Flush cache
+================
+
+Default context
+----------------
+As default "Development" is used by TYPO3 Flow
+::
+	$ ./flow flow:cache:flush
+
+Testing context
+----------------
+
+::
+
+	$ FLOW_CONTEXT=Testing ./flow flow:cache:flush
 
 Command line testing with PHPUnit
 ================
