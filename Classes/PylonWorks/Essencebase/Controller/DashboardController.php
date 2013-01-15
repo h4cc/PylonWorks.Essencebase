@@ -16,14 +16,21 @@ use TYPO3\Flow\Annotations as Flow;
 class DashboardController extends \TYPO3\Flow\Mvc\Controller\ActionController {
 
 	/**
+	 * @var \TYPO3\Flow\Security\Context
+	 * @Flow\Inject
+	 */
+	protected $securityContext;
+
+	/**
 	 * Index action
 	 *
 	 * @return void
 	 */
 	public function indexAction() {
+		$account = $this->securityContext->getAccount();
 
+		$this->view->assign('account', $account);
 	}
-
 }
 
 ?>
