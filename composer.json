@@ -7,7 +7,8 @@
 	"require": {
 		"typo3/flow": "*",
 		"typo3/flow-composer-installers": "*",
-		"typo3/twitter-bootstrap": "*"
+		"typo3/twitter-bootstrap": "*",
+		"morphodo/fortawesome-fontawesome": "*"
 	},
 	"require-dev":{
 		"typo3/kickstart":"dev-master",
