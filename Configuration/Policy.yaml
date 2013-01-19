@@ -1,6 +1,6 @@
 roles:
-  Administrator: [Redakteur]
-  Redakteur: []
+  Administrator: [Tester]
+  Tester: []
 
 resources:
   methods:
@@ -10,6 +10,6 @@ acls:
   Administrator:
     methods:
       Dashboard:  GRANT
-  Redakteur:
+  Tester:
     methods:
       Dashboard: GRANT
