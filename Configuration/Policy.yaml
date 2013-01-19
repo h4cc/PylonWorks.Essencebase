@@ -5,11 +5,14 @@ roles:
 resources:
   methods:
     Dashboard: method(PylonWorks\Essencebase\Controller\DashboardController->.*())
+    UserSettings: method(PylonWorks\Essencebase\Controller\UserSettingsController->.*())
 
 acls:
   Administrator:
     methods:
       Dashboard:  GRANT
+      UserSettings:  GRANT
   Tester:
     methods:
       Dashboard: GRANT
+      UserSettings: GRANT
