@@ -1,4 +1,5 @@
 {namespace bootstrap=TYPO3\Twitter\Bootstrap\ViewHelpers}
+{namespace awesome=Morphodo\FortAwesome\FontAwesome\ViewHelpers}
 <?xml version="1.0" encoding="UTF-8" ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
@@ -7,9 +8,12 @@
 		<meta charset="utf-8">
 		<title><f:render section="Title" /></title>
 		<f:base />
+
 		<link href="{f:uri.resource(path: 'Twitter/Bootstrap/css/bootstrap.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
+		<awesome:include />
 		<script src="{f:uri.resource(path: 'Twitter/Bootstrap/js/bootstrap.js', package: 'PylonWorks.Essencebase')}"></script>
 		<link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
+
 	</head>
 	<body>
     <div class="container">
