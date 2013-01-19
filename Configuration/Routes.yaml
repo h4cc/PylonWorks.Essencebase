@@ -1,6 +1,6 @@
 # Logout
 -
-  name: 'Fallback'
+  name: 'Logout'
   uriPattern: 'logout'
   defaults:
     '@package': 'PylonWorks.Essencebase'
@@ -18,11 +18,11 @@
 
 # User settings
 -
-  name: 'Default dashboard'
-  uriPattern: 'user/settings/{@action}'
+  name: 'User settings'
+  uriPattern: 'settings(/{@action})'
   defaults:
     '@package': 'PylonWorks.Essencebase'
-    '@controller': 'User'
+    '@controller': 'UserSettings'
     '@action': 'index'
   appendExceedingArguments: true
 
