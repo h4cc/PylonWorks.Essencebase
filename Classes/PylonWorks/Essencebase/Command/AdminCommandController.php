@@ -22,10 +22,16 @@ class AdminCommandController extends \TYPO3\Flow\Cli\CommandController {
 	protected $accountRepository;
 
 	/**
-	 * @var \TYPO3\Flow\Security\AccountFactory
+	 * @var \PylonWorks\Essencebase\Domain\Factory\UserFactory
 	 * @Flow\Inject
 	 */
-	protected $accountFactory;
+	protected $userFactory;
+
+	/**
+	 * @Flow\Inject
+	 * @var \TYPO3\Party\Domain\Repository\PartyRepository
+	 */
+	protected $partyRepository;
 
 	/**
 	 * Create new admin user account
@@ -37,9 +43,10 @@ class AdminCommandController extends \TYPO3\Flow\Cli\CommandController {
 	 * @return void
 	 */
 	public function createCommand($identifier, $password, $role = "Administrator") {
-		$admin = $this->accountFactory->createAccountWithPassword($identifier, $password, array($role));
 		try {
-			$this->accountRepository->add($admin);
+			$user = $this->userFactory->create($identifier, $password, $firstName = 'firstname', $lastName = 'lastname', array($role));
+			$this->partyRepository->add($user);
+			$this->accountRepository->add($user->getAccounts()->first());
 			$this->outputLine("Created new admin user: %s", array($identifier));
 		} catch (\TYPO3\Flow\Persistence\Exception\IllegalObjectTypeException $exception) {
 			$this->outputLine("Admin user already exists.");
