@@ -1,37 +1,49 @@
+<!DOCTYPE html>
 {namespace bootstrap=TYPO3\Twitter\Bootstrap\ViewHelpers}
 {namespace awesome=Morphodo\FortAwesome\FontAwesome\ViewHelpers}
-<?xml version="1.0" encoding="UTF-8" ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
-      xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
+	xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
+	xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
+
 	<head>
-		<meta charset="utf-8">
-		<title><f:render section="Title" /></title>
-		<f:base />
-		<link href="{f:uri.resource(path: 'Twitter/Bootstrap/css/bootstrap.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
-		<awesome:include />
-		<script data-main="{f:uri.resource(path: 'JavaScript/', package: 'PylonWorks.Essencebase')}application" src="{f:uri.resource(path: 'JavaScript/require.js', package: 'PylonWorks.Essencebase')}"></script>
-		<link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
+		<meta charset="utf-8"/>
+		<title>
+			<f:render section="Title"/>
+			- v. {version}
+		</title>
+		<f:base/>
+		<link href="{f:uri.resource(path: 'Twitter/Bootstrap/css/bootstrap.css', package: 'PylonWorks.Essencebase')}"
+			  media="screen" rel="stylesheet" type="text/css"/>
+		<awesome:include/>
+		<script data-main="{f:uri.resource(path: 'JavaScript/', package: 'PylonWorks.Essencebase')}application"
+				src="{f:uri.resource(path: 'JavaScript/require.js', package: 'PylonWorks.Essencebase')}"></script>
+		<link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen"
+			  rel="stylesheet" type="text/css"/>
 	</head>
+
 	<body>
 
-	<f:render partial="MainNavigation" />
+		<f:render partial="MainNavigation"/>
 
-	<div class="container">
-		<f:render partial="FlashMessage" />
+		<div class="container">
+			<f:render partial="FlashMessage"/>
 
-		<f:form.validationResults>
-			<f:if condition="{validationResults.flattenedErrors}">
-				<ul class="error">
-					<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
-						<li>{propertyPath}: <f:for each="{errors}" as="error">{error}</f:for></li>
-					</f:for>
-				</ul>
-			</f:if>
-		</f:form.validationResults>
+			<f:form.validationResults>
+				<f:if condition="{validationResults.flattenedErrors}">
+					<ul class="error">
+						<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
+							<li>{propertyPath}:
+								<f:for each="{errors}" as="error">{error}</f:for>
+							</li>
+						</f:for>
+					</ul>
+				</f:if>
+			</f:form.validationResults>
 
-		<h3><f:render section="Title" /></h3>
-		<f:render section="Content" />
-    </div>
+			<h3>
+				<f:render section="Title"/>
+			</h3>
+			<f:render section="Content"/>
+		</div>
 	</body>
 </html>

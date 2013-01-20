@@ -1,26 +1,35 @@
+<!DOCTYPE html>
 {namespace bootstrap=TYPO3\Twitter\Bootstrap\ViewHelpers}
 {namespace awesome=Morphodo\FortAwesome\FontAwesome\ViewHelpers}
-<?xml version="1.0" encoding="UTF-8" ?>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
-      xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
+	xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
+	xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
+
 	<head>
 		<meta charset="utf-8">
-		<title><f:render section="Title" /></title>
-		<f:base />
+		<title>
+			<f:render section="Title"/>
+			- v. {version}
+		</title>
+		<f:base/>
 
-		<link href="{f:uri.resource(path: 'Twitter/Bootstrap/css/bootstrap.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
-		<awesome:include />
+		<link href="{f:uri.resource(path: 'Twitter/Bootstrap/css/bootstrap.css', package: 'PylonWorks.Essencebase')}"
+			  media="screen" rel="stylesheet" type="text/css"/>
+		<awesome:include/>
 		<script src="{f:uri.resource(path: 'Twitter/Bootstrap/js/bootstrap.js', package: 'PylonWorks.Essencebase')}"></script>
-		<link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen" rel="stylesheet" type="text/css" />
+		<link href="{f:uri.resource(path: 'Css/default.css', package: 'PylonWorks.Essencebase')}" media="screen"
+			  rel="stylesheet" type="text/css"/>
 
 	</head>
-	<body>
-    <div class="container">
-		<f:render partial="FlashMessage" />
 
-		<h1><f:render section="Title" /></h1>
-		<f:render section="Content" />
-    </div>
+	<body>
+		<div class="container">
+			<f:render partial="FlashMessage"/>
+
+			<h1>
+				<f:render section="Title"/>
+			</h1>
+			<f:render section="Content"/>
+		</div>
 	</body>
 </html>

@@ -1,16 +1,27 @@
-<f:layout name="Default" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:bootstrap="http://www.pylonworks.pw/ns/TYPO3/Twitter/Bootstrap/ViewHelpers"
+	xmlns:f="http://www.pylonworks.pw/ns/TYPO3/Fluid/ViewHelpers" lang="en">
 
-<f:section name="Title">User settings</f:section>
+	<f:layout name="Default"/>
 
-<f:section name="Content">
+	<head>
+		<f:section name="Title">User settings</f:section>
+	</head>
 
-	<f:form action="update" name="account" object="{account}">
-		<div class="row t3-module-container">
-			<f:render partial="EditUserSettingsForm" arguments="{account: account}"/>
-		</div>
+	<body>
+		<f:section name="Content">
 
-		<div class="form-actions form-footer">
-			<f:form.submit value="Save" class="btn btn-primary" />
-		</div>
-	</f:form>
-</f:section>
+			<f:form action="update" name="account" object="{account}">
+				<div class="row t3-module-container">
+					<f:render partial="EditUserSettingsForm" arguments="{account: account}"/>
+				</div>
+
+				<div class="form-actions form-footer">
+					<f:form.submit value="Save" class="btn btn-primary"/>
+				</div>
+			</f:form>
+		</f:section>
+	</body>
+
+</html>
