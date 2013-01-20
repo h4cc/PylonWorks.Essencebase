@@ -15,6 +15,9 @@ TYPO3:
                 '@controller': 'Login'
                 '@action': 'authenticate'
                 '@format': 'html'
+PylonWorks:
+  EssenceBase:
+    version: '0.1'
 
         #  AdminInterfaceProvider:
         #    provider: 'PersistedUsernamePasswordProvider'
