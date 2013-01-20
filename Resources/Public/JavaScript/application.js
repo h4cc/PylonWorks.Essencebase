@@ -1,11 +1,11 @@
 require.config({
 	shim: {
-		'bootstrap-dropdown' : ['jquery']
+		'bootstrap-dropdown' : ['jquery'],
+		'jquery-cookie': ['jquery'],
+		'username': ['jquery-cookie']
 	}
 });
 
-require(['jquery', 'bootstrap-dropdown'], function($) {
-	$('#dropdown').dropdown({
-
-	});
+require(['jquery', 'username', 'bootstrap-dropdown'], function($, username) {
+	$('#dropdown').dropdown({});
 })

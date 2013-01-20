@@ -16,6 +16,12 @@ use TYPO3\Flow\Annotations as Flow;
 class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\AbstractAuthenticationController {
 
 	/**
+	 * @var \TYPO3\Flow\Security\Context
+	 * @Flow\Inject
+	 */
+	protected $securityContext;
+
+	/**
 	 * Index action
 	 *
 	 * @return void
@@ -34,7 +40,9 @@ class LoginController extends \TYPO3\Flow\Security\Authentication\Controller\Abs
 	 * @return string
 	 */
 	protected function onAuthenticationSuccess(\TYPO3\Flow\Mvc\ActionRequest $originalRequest = NULL) {
+		$account = $this->securityContext->getAccount();
 		$this->flashMessageContainer->addMessage(new \TYPO3\Flow\Error\Message('Successfully logged in.', NULL, array(), 'Welcome!'));
+		setcookie("username", $account->getAccountIdentifier());
 		$this->redirect('index', 'Dashboard');
 	}
 
