@@ -7,6 +7,8 @@ namespace PylonWorks\Essencebase\Domain\Factory;
  *                                                                        */
 
 use TYPO3\Flow\Annotations as Flow;
+use TYPO3\Party\Domain\Model\PersonName;
+use TYPO3\Party\Domain\Model\Person;
 
 /**
  * A factory to create User models
@@ -30,8 +32,10 @@ class UserFactory {
 	 * @return \TYPO3\Party\Domain\Model\Person
 	 */
 	public function create($identifier, $password, $firstName = 'tee', $lastName = 'ssss', array $roles = array('Tester')) {
-		$user = new \TYPO3\Party\Domain\Model\Person();
-		$name = new \TYPO3\Party\Domain\Model\PersonName('', $firstName, '', $lastName);
+		/** @var \TYPO3\Party\Domain\Model\Person $user  */
+        $user = new Person();
+        /** @var \TYPO3\Party\Domain\Model\PersonName $user  */
+		$name = new PersonName('', $firstName, '', $lastName);
 		$user->setName($name);
 		$account = $this->accountFactory->createAccountWithPassword($identifier, $password, $roles);
 		$user->addAccount($account);
