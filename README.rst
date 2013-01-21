@@ -6,6 +6,7 @@ Essencebase
 :Author: Marcel Silberhorn <c0d3+essencebase@childno.de>
 :Description: TYPO3 Flow based test plan tool
 :Homepage: http://www.pylonworks.com
+:planning poker: http://kunagi.pylonworks.com/kunagi
 :Build status: |buildStatusIcon|
 
 Update
