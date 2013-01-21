@@ -28,7 +28,7 @@ class UserFactoryTest extends \TYPO3\Flow\Tests\FunctionalTestCase {
 	 * @test
 	 */
 	public function testCreate() {
-		$userFactory = new UserFactory();
+		$userFactory = new \PylonWorks\Essencebase\Domain\Factory\UserFactory();
 		$this->assertInstanceOf("\TYPO3\Party\Domain\Model\Person", $userFactory->create("test", "user"));
 	}
 }
