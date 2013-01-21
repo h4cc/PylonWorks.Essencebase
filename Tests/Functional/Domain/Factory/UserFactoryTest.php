@@ -6,7 +6,6 @@ use PylonWorks\Essencebase\Domain\Factory\UserFactory;
 use TYPO3\Flow\Security\AccountFactory;
 
 /**
- * Created by JetBrains PhpStorm.
  * User: silberhorn
  * Date: 21.01.13
  * Time: 02:00
@@ -25,22 +24,11 @@ class UserFactoryTest extends \TYPO3\Flow\Tests\FunctionalTestCase {
 	 */
 	protected $accountFactory;
 
-
-	/*
-	protected function setUp()
-	{
-		$this->userFactory = new UserFactory();
-		$this->accountFactory = new AccountFactory();
-	}
-	*/
-
 	/**
 	 * @test
 	 */
 	public function testCreate() {
-		/* @var \PylonWorks\Essencebase\Domain\Factory\UserFactory $userFactory */
 		$userFactory = new UserFactory();
-
 		$this->assertInstanceOf("\TYPO3\Party\Domain\Model\Person", $userFactory->create("test", "user"));
 	}
 }
