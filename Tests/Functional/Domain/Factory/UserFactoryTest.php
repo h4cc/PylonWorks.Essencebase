@@ -1,7 +1,8 @@
 <?php
-namespace PylonWorks\Essencebase\Domain\Factory;
+namespace PylonWorks\Essencebase\Tests\Functional\Domain\Factory;
 
 use TYPO3\Flow\Annotations as Flow;
+use PylonWorks\Essencebase\Domain\Factory\UserFactory;
 use TYPO3\Flow\Security\AccountFactory;
 
 /**
@@ -10,7 +11,7 @@ use TYPO3\Flow\Security\AccountFactory;
  * Date: 21.01.13
  * Time: 02:00
  */
-class UserFactoryTest extends \TYPO3\Flow\Tests\UnitTestCase {
+class UserFactoryTest extends \TYPO3\Flow\Tests\FunctionalTestCase {
 
 	/**
 	 * @var \PylonWorks\Essencebase\Domain\Factory\UserFactory
@@ -37,6 +38,7 @@ class UserFactoryTest extends \TYPO3\Flow\Tests\UnitTestCase {
 	 * @test
 	 */
 	public function testCreate() {
+		/* @var \PylonWorks\Essencebase\Domain\Factory\UserFactory $userFactory */
 		$userFactory = new UserFactory();
 
 		$this->assertInstanceOf("\TYPO3\Party\Domain\Model\Person", $userFactory->create("test", "user"));
