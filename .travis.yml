@@ -11,6 +11,7 @@ before_script:
 
 script:
   - phpunit -c Tests/Unit.travis.xml
+  - phpunit -c Tests/Functional.travis.xml
 
 notifications:
   email:
