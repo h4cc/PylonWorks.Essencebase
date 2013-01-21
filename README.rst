@@ -3,7 +3,7 @@ Essencebase
 ++++++++++++++++++++++++
 
 :Author: Michael Klapper <development@morphodo.com>
-:Author: Marcel Silberhorn
+:Author: Marcel Silberhorn <c0d3+essencebase@childno.de>
 :Description: TYPO3 Flow based test plan tool
 :Homepage: http://www.pylonworks.com
 :Build status: |buildStatusIcon|
