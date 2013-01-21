@@ -15,8 +15,7 @@ use TYPO3\Party\Domain\Model\Person;
  *
  * @Flow\Scope("singleton")
  */
-class UserFactory
-{
+class UserFactory {
 
 	/**
 	 * @Flow\Inject
@@ -32,8 +31,7 @@ class UserFactory
 	 * @param array $roles List of roles the user becomes.
 	 * @return \TYPO3\Party\Domain\Model\Person
 	 */
-	public function create($identifier, $password, $firstName = 'tee', $lastName = 'ssss', array $roles = array('Tester'))
-	{
+	public function create($identifier, $password, $firstName = 'tee', $lastName = 'ssss', array $roles = array('Tester')) {
 		/** @var \TYPO3\Party\Domain\Model\Person $user */
 		$user = new Person();
 		/** @var \TYPO3\Party\Domain\Model\PersonName $name */

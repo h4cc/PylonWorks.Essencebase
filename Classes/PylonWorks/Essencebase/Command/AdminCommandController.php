@@ -37,14 +37,16 @@ class AdminCommandController extends \TYPO3\Flow\Cli\CommandController {
 	 * Create new admin user account
 	 *
 	 * @param string $identifier Email address must be unique
-	 * @param string $password At least 8 character
+	 * @param string $password   At least 8 character
+	 * @param string $firstName  The first name
+	 * @param string $lastName   The last name
 	 * @param string $role Default is set to: Administrator
 	 *
 	 * @return void
 	 */
-	public function createCommand($identifier, $password, $role = "Administrator") {
+	public function createCommand($identifier, $password, $firstName = 'firstname', $lastName = 'lastname', $role = "Administrator") {
 		try {
-			$user = $this->userFactory->create($identifier, $password, $firstName = 'firstname', $lastName = 'lastname', array($role));
+			$user = $this->userFactory->create($identifier, $password, $firstName, $lastName, array($role));
 			$this->partyRepository->add($user);
 			$this->accountRepository->add($user->getAccounts()->first());
 			$this->outputLine("Created new admin user: %s", array($identifier));
