@@ -6,13 +6,9 @@ env:
   - DB=mysql
 
 before_script:
-  - composer require typo3/buildessentials:dev-master
-  - composer install --dev
+  - composer require pylonworks/essencebase:dev-master --dev
 
 script:
-  - phpunit -c Tests/Unit.travis.xml
-  - phpunit -c Tests/Functional.travis.xml
+  - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.travis.xml
+  - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Functional.travis.xml
 
-notifications:
-  email:
-    - development@morphodo.com
