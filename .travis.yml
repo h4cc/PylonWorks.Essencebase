@@ -7,7 +7,7 @@ env:
 
 before_script:
   - mkdir essencebase && mv composer.json essencebase/ && cd essencebase
-  - composer require pylonworks/essencebase:dev-master --dev
+  - composer require pylonworks/essencebase dev-master
 
 script:
   - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.travis.xml
