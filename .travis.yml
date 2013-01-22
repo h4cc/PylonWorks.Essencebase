@@ -6,7 +6,7 @@ env:
   - DB=mysql
 
 before_script:
-  - mkdir essencebase && cd essencebase
+  - mkdir essencebase && mv composer.json essencebase/ && cd essencebase
   - composer require pylonworks/essencebase:dev-master --dev
 
 script:
