@@ -12,6 +12,6 @@ before_script:
   - composer install --dev
 
 script:
-  - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.travis.xml
-  - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Functional.travis.xml
+  - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.xml
+  - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Functional.xml
 
