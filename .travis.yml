@@ -10,7 +10,7 @@ before_script:
   - sed -i '2,3d' composer.json
   - composer require pylonworks/essencebase:*
   - composer install --dev
-  - sed '/Subroutes from the Welcome package/,+12d' Configuration/Routes.yaml
+  - sed -i '/Subroutes from the Welcome package/,+12d' Configuration/Routes.yaml
 
 script:
   - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.xml
