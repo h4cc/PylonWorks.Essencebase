@@ -10,6 +10,7 @@ before_script:
   - sed -i '2,3d' composer.json
   - composer require pylonworks/essencebase:*
   - composer install --dev
+  - cat Configuration/Routes.yaml
 
 script:
   - phpunit -c Packages/Application/PylonWorks.Essencebase/Tests/Unit.xml
