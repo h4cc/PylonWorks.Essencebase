@@ -6,7 +6,6 @@ env:
   - DB=mysql
 
 before_script:
-  - sudo apt-get install -qq php5-mcrypt php5-curl php5-gd php5-mysql php5-sqlite
   - rm -rf !(composer.json|.travis.yml)
   - sed -i '2,3d' composer.json
   - composer require pylonworks/essencebase:*
