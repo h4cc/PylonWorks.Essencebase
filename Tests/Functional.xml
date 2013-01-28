@@ -1,9 +1,16 @@
 <?xml version="1.0"?>
 <phpunit strict="true"
-         bootstrap="../../../../Build/BuildEssentials/PhpUnit/FunctionalTestBootstrap.php"
-         convertErrorsToExceptions="true"
-         convertNoticesToExceptions="true"
-         convertWarningsToExceptions="true">
+	 	 bootstrap="../../../../Build/BuildEssentials/PhpUnit/FunctionalTestBootstrap.php"
+		 convertErrorsToExceptions="true"
+		 convertNoticesToExceptions="true"
+		 convertWarningsToExceptions="true"
+		 backupGlobals="true"
+		 backupStaticAttributes="true"
+		 colors="true"
+		 processIsolation="false"
+		 stopOnFailure="false"
+		 syntaxCheck="true"
+		 verbose="true">
     <testsuites>
         <testsuite name="All functional tests">
             <directory>./Functional/</directory>
