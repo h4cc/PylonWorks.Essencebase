@@ -1,0 +1,25 @@
+<f:layout name="Default" />
+
+<f:section name="Title">New project</f:section>
+
+<f:section name="Content">
+	<p>Just fill out the following form to create a new project:</p>
+
+	<f:form action="create" name="newProject">
+		<ol>
+			<li>
+				<label for="name">Name</label>
+				<f:form.textfield property="name" id="name" />
+			</li>
+
+			<li>
+				<label for="testPlan">Test plan</label>
+				<f:form.textfield property="testPlan" id="testPlan" />
+			</li>
+
+			<li>
+				<f:form.submit value="Create" />
+			</li>
+		</ol>
+	</f:form>
+</f:section>
