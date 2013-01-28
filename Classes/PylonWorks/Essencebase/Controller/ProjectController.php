@@ -16,7 +16,7 @@ use \PylonWorks\Essencebase\Domain\Model\Project;
  *
  * @Flow\Scope("singleton")
  */
-	class ProjectController extends ActionController {
+class ProjectController extends ActionController {
 
 	/**
 	 * @Flow\Inject
