@@ -82,6 +82,8 @@ Download XSD files
 
 |downloadXsdFiles|
 
+If the bulb doesn't appear, just hit alt-Enter
+
 .. |buildStatusIcon| image:: https://travis-ci.org/PylonWorks/PylonWorks.Essencebase.png?branch=master
    :alt: Build Status
    :target: https://travis-ci.org/PylonWorks/PylonWorks.Essencebase
