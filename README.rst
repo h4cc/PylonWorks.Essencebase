@@ -8,6 +8,12 @@ Essencebase
 :Homepage: http://www.pylonworks.com
 :planning poker: http://kunagi.pylonworks.com/kunagi
 :Build status: |buildStatusIcon|
+:g+: http://plus.google.com/105875200743002032350
+:fb: not (yet)
+
+
+
+
 
 Update
 ================
