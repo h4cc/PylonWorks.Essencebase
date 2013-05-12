@@ -2,6 +2,12 @@ TYPO3:
   Flow:
     configuration:
       compileConfigurationFiles: TRUE
+    persistence:
+      backendOptions:
+        driver: 'pdo_sqlite'
+        path: '/tmp/essencebase.sqlite'
+        user: 'pw'
+        password: 'eb'
     security:
       authentication:
         authenticationStrategy: oneToken
@@ -18,6 +24,7 @@ TYPO3:
 PylonWorks:
   EssenceBase:
     version: '0.1'
+    storagepath: '/tmp/essencebase'
 
         #  AdminInterfaceProvider:
         #    provider: 'PersistedUsernamePasswordProvider'

@@ -36,10 +36,10 @@
     '@action': 'authenticate'
 
 # Fallback
--
-  name: 'Fallback'
-  uriPattern: ''
-  defaults:
-    '@package': 'PylonWorks.Essencebase'
-    '@controller': 'Login'
-    '@action': 'index'
+#-
+#  name: 'Fallback'
+#  uriPattern: ''
+#  defaults:
+#    '@package': 'PylonWorks.Essencebase'
+#    '@controller': 'Login'
+#    '@action': 'index'

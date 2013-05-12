@@ -1,0 +1,21 @@
+{
+    "require": {
+        "doctrine/common": "2.3.0",
+        "pylonworks/essencebase": "*",
+        "typo3/flow": "*",
+        "typo3/flow-composer-installers": "*",
+        "typo3/twitter-bootstrap": "*",
+        "typo3/kickstart": "dev-master",
+        "typo3/buildessentials": "dev-master",
+        "phpunit/phpunit": "3.7.*"
+    },
+    "minimum-stability":"dev",
+    "scripts": {
+        "post-update-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall",
+        "post-install-cmd": "TYPO3\\Flow\\Composer\\InstallerScripts::postUpdateAndInstall"
+    },
+    "config": {
+        "vendor-dir": "Packages/Libraries",
+        "bin-dir": "bin"
+    }
+}
